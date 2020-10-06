@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style_check.css" />
+  <title>SOONGFLIX</title>
+  <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+
+</head>
+
+<body>
+  <header class="showcase">
+    <div class="showcase-top">
+      <img src="SOONGFLIX_LOGO.png" width="15%">
+    </div>
+  </header>
+  <div class="mp3">
+    <p>"Gaiety in the Golden Age - Aaron Kenny"</p>
+    <p>↓노래가 안나오면 플레이 버튼을 눌러주세요</p>
+    <audio controls autoplay src="Gaiety in the Golden Age - Aaron Kenny.mp3" loop></audio>
+
+  </div>
+  <div class="gap"></div>
+  <p>여느 때와 같이 PC에 접속한 나</p>
+  <div class="gap"></div>
+  <p>"...?"</p>
+  <div class="gap"></div>
+  <img src="start.jpg" alt="푸른빛">
+  <p>갑자기 푸른 빛에 휩싸이며 <strong>영화 세상</strong> 으로 들어오고 말았다.</p>
+  <div class="gap2"></div>
+  <img src="pow.jpg" alt="펑!">
+  <p>"펑!!"</p>
+  <div class="gap2"></div>
+  <p>펑!! 소리와 함께 어디선가 자신을 "척척박사" 라고 말하는 캐릭터가 나타났다.</p>
+  <p>난데없이 나타나선 내 취향에 따라 원하는 영화로 갈 수 있게 도와준다는데?</p>
+  <img src="dr.movie.png" alt="척척박사">
+  <p>"안녕 나는 숭플릭스의 척척박사라고 해! 보시다 시피 여기는 영화속 세상으로 가기 전 입구야!"</p>
+  <p>"이곳을 통해 너가 평소에 꿈꾸던 영화로 들어가서 살 수 있어, 하지만 그냥 원하는 곳으로 갈 순 없지. 너의 취향을 알아내서 네가 갈 수 있는 영화 1개를 골라 줄게!"</p>
+  <div class="gap2"></div>
+
+
+
+
+
+
+
+  <img src="genre.jpg" alt="장르">
+  <p>Q1. 평소 좋아하던 영화 장르를 골라봐!</p>
+  <div id="radioContainer">
+    <label><input type="radio" name="Q1" value="1" onclick="$('html, body').stop().animate( { scrollTop : '+=750' } );">1. 멜로/로맨스</label>
+    <label><input type="radio" name="Q1" value="2" onclick="$('html, body').stop().animate( { scrollTop : '+=750' } );">2. 코미디</label>
+    <label><input type="radio" name="Q1" value="3" onclick="$('html, body').stop().animate( { scrollTop : '+=750' } );">3. 액션</label>
+    <label><input type="radio" name="Q1" value="4" onclick="$('html, body').stop().animate( { scrollTop : '+=750' } );">4. 공포(호러)</label>
+    <label><input type="radio" name="Q1" value="5" onclick="$('html, body').stop().animate( { scrollTop : '+=750' } );">5. 판타지/SF</label>
+  </div>
+  <div class="gap2"></div>
+  <img src="feel.jpg" alt="기분">
+  <p>Q2. 현재 너의 컨디션은 어때?</p>
+  <div id="radioContainer">
+    <label><input type="radio" name="Q2" value="1" onclick="$('html, body').stop().animate( { scrollTop : '+=750' } );">1. 최상의 컨디션. 몸이 날아 갈 것 같아</label>
+    <label><input type="radio" name="Q2" value="2" onclick="$('html, body').stop().animate( { scrollTop : '+=750' } );">2. 괜찮은 정도. 나쁠껀 뭐야</label>
+    <label><input type="radio" name="Q2" value="3" onclick="$('html, body').stop().animate( { scrollTop : '+=750' } );">3. 보통. 쏘쏘해</label>
+    <label><input type="radio" name="Q2" value="4" onclick="$('html, body').stop().animate( { scrollTop : '+=750' } );">4. 최악. 힘들어</label>
+  </div>
+  <div class="gap2"></div>
+  <img src="reality.jpg" alt="현실적">
+  <p>Q3. 다음 중 네가 생각하는 가장 현실적인 건 뭐야?</p>
+  <div id="radioContainer">
+    <label><input type="radio" name="Q3" value="1" onclick="$('html, body').stop().animate( { scrollTop : '+=750' } );">1. 복권 1등 당첨</label>
+    <label><input type="radio" name="Q3" value="2" onclick="$('html, body').stop().animate( { scrollTop : '+=750' } );">2. 인공지능 로봇</label>
+    <label><input type="radio" name="Q3" value="3" onclick="$('html, body').stop().animate( { scrollTop : '+=750' } );">3. 상상의 동물</label>
+    <label><input type="radio" name="Q3" value="4" onclick="$('html, body').stop().animate( { scrollTop : '+=750' } );">4. 총에 맞았지만 살아난 사람</label>
+  </div>
+  <div class="gap2"></div>
+  <img src="vacation.jpg" alt="휴가">
+  <p>Q4. 모처럼만의 휴가를 받는다면 네가 제일 가고 싶은 곳은 어디야?</p>
+  <div id="radioContainer">
+    <label><input type="radio" name="Q4" value="1" onclick="$('html, body').stop().animate( { scrollTop : '+=750' } );">1. 해외의 화려한 유흥 도시</label>
+    <label><input type="radio" name="Q4" value="2" onclick="$('html, body').stop().animate( { scrollTop : '+=750' } );">2. 인심 넘치는 시골로 드라이브</label>
+    <label><input type="radio" name="Q4" value="3" onclick="$('html, body').stop().animate( { scrollTop : '+=750' } );">3. 뒷산으로 가벼운 등산</label>
+    <label><input type="radio" name="Q4" value="4" onclick="$('html, body').stop().animate( { scrollTop : '+=750' } );">4. 국내의 바다</label>
+  </div>
+  <div class="gap2">
+  </div>
+</body>
+
+</html>

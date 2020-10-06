@@ -1,0 +1,59 @@
+body {
+  background-color: black;
+  text-align: center;
+  color: white;
+  background: url("SOONGFLIX_background2.png") no-repeat center/cover;
+}
+
+h1 {
+text-shadow: -1px 0 gray, 0 1px gray, 1px 0 gray, 0 -1px gray;
+
+}
+
+.showcase-top {
+  text-align: left;
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.showcase {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+}
+
+.a {
+  margin: 200px;
+}
+
+.b {
+  margin: 250px;
+}
+
+
+
+.myButton {
+	box-shadow:inset 0px 1px 0px 0px #f5978e;
+	background:linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
+	background-color:#f24537;
+	border-radius:6px;
+	border:1px solid #d02718;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #810e05;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #c62d1f 5%, #f24537 100%);
+	background-color:#c62d1f;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
