@@ -1,0 +1,116 @@
+/*
+ * Slideshow
+ */
+
+ .slideshow {
+    background-color: rgb(0, 0, 0);
+    height: 465px;
+    min-width: 960px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .slideshow-slides {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    /* left는 JavaScript로 지정 */
+  }
+  .slideshow-slides .slide {
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    /* left는 JavaScript로 지정 */
+  }
+  .slideshow-slides .slide img {
+    left: 50%;
+    margin-left: -800px;
+    position: absolute;
+  }
+  
+  .slideshow-nav a,
+  .slideshow-indicator a {
+    background-color: rgba(0, 0, 0, 0); /* for IE9 */
+    overflow: hidden;
+  }
+  .slideshow-nav a:before,
+  .slideshow-indicator a:before {
+    content: url(../img/sprites.png);
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+  }
+  
+  .slideshow-nav a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 72px;
+    height: 72px;
+    margin-top: -36px;
+  }
+  .slideshow-nav a.prev {
+    margin-left: -480px;
+  }
+  .slideshow-nav a.prev:before {
+    margin-top: -20px;
+  }
+  .slideshow-nav a.next {
+    margin-left: 408px;
+  }
+  .slideshow-nav a.next:before {
+    margin-left: -80px;
+    margin-top: -20px;
+  }
+  .slideshow-nav a.disabled {
+    display: none;
+  }
+  
+  .slideshow-indicator {
+    bottom: 30px;
+    height: 16px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+  }
+  .slideshow-indicator a {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-left: 3px;
+    margin-right: 3px;
+  }
+  .slideshow-indicator a.active {
+    cursor: default;
+  }
+  .slideshow-indicator a:before {
+    margin-left: -110px;
+  }
+  .slideshow-indicator a.active:before {
+    margin-left: -130px;
+  }
+  
+  /* JavsScript 비활성화 시 */
+  .no-js .slideshow {
+    height: auto;
+  }
+  .no-js .slideshow-slides {
+    height: auto;
+    position: static;
+  }
+  .no-js .slideshow-slides .slide {
+    display: block;
+    height: auto;
+    position: static;
+  }
+  .no-js .slideshow-slides .slide img {
+    margin: auto;
+    position: static;
+  }
+  .no-js .slideshow-nav,
+  .no-js .slideshow-indicator {
+    display: none;
+  }
+  

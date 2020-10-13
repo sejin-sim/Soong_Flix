@@ -3,27 +3,63 @@
 
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="style_soong.css" />
+  
+  
+  <link rel='stylesheet' href="{{ url_for('static', filename='css/reset.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style_soong.css')}}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/slide.css') }}">
+  <script src='/static/js/jquery-1.10.2.min.js'></script>
+  <script src='/static/js/jquery-ui-1.10.3.custom.min.js'></script>
+  <script src="/static/js/main.js"></script>
+  <script src="/static/js/modernizr.custom.min.js"/></script>
+
   <title>SOONGFLIX</title>
 </head>
-
 <body>
+  <div class="backgroundOpacity">
+
+    
   <header class="showcase">
     <div class="showcase-top">
-      <img src="SOONGFLIX_LOGO.png" width="15%">
+    <img src="/static/img/SOONGFLIX_LOGO.png" width="15%"> 
     </div>
   </header>
-  <h1>영화추천프로그램</h1>
-  "Soong_Flix와 함께하는 취향저격 영화 추천"
-  <div class="a">
-  </div>
-  <input type="button" name="시작하기" value="start" onclick="location.href='soongflix_check_1.html'" <a href="#" class="myButton"></a>
-  <br><br><br>
-  'start' 버튼을 누르세요.
-  <div class="b">
-  </div>
-  2020-2학기 숭실대 미디어경영학과 프로그래밍2 수업 3팀
-  <br><br><br>
+  
+    <div class='contentsContainer'>
+      
+      <div class="contentsImage">
+          <a href=start class="myButton"> start </a> <!-- 1008 심세진 수정 -->
+      </div>
+      <div class='textstyle'>
+        <span class="movieTitle">SoongFlix의 취향저격</span></br>
+        <span class="movieTitle">영화 추천</span>
+        <span class="product">'start' 버튼을 눌러 영화 추천을 시작하세요.</span>
+      </div>
+      
+
+      <div class="slideshow">
+        <div class="slideshow-slides">
+            <a href="#" class="slide" id="slide-1"><img src="../static/img/slide-1.jpg" alt="" width="1600" height="465"></a>
+            <a href="#" class="slide" id="slide-2"><img src="../static/img/slide-2.jpg" alt="" width="1600" height="465"></a>
+            <a href="#" class="slide" id="slide-3"><img src="../static/img/slide-3.jpg" alt="" width="1600" height="465"></a>
+            <a href="#" class="slide" id="slide-4"><img src="../static/img/slide-4.jpg" alt="" width="1600" height="465"></a>
+        </div>
+        <div class="slideshow-nav">
+            <a href="#" class="prev">Prev</a>
+            <a href="#" class="next">Next</a>
+        </div>
+        <div class="slideshow-indicator"></div>
+      </div>
+
+    </div>
+      
+      <!-- <span>2020-2학기 숭실대 미디어경영학과 프로그래밍2 수업 3팀</span> -->
+      
+      
+    </div>
+  </div> 
+  
+  
 </body>
 
 </html>

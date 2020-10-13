@@ -4,21 +4,27 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="style_check.css" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='style_check.css') }}">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
   <title>SOONGFLIX</title>
-  <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
-
+    
 </head>
 
 <body>
   <header class="showcase">
     <div class="showcase-top">
-      <img src="SOONGFLIX_LOGO.png" width="15%">
+      <img src="static/SOONGFLIX_LOGO.png" width="15%">
     </div>
   </header>
   <div class="mp3">
     <p>"Gaiety in the Golden Age - Aaron Kenny"</p>
     <p>↓노래가 안나오면 플레이 버튼을 눌러주세요</p>
-    <audio controls autoplay src="Gaiety in the Golden Age - Aaron Kenny.mp3" loop></audio>
+    <audio id = "bgAudio" controls autoplay src="static/Gaiety in the Golden Age - Aaron Kenny.mp3" loop></audio>
+    <script>
+         var audio = document.getElementById("bgAudio");
+         audio.volume = 0.3;
+    </script><!-- 1010 이수진 수정 오디오 기본 출력 30%로 설정 -->
+
 
   </div>
   <div class="gap"></div>
@@ -26,63 +32,135 @@
   <div class="gap"></div>
   <p>"...?"</p>
   <div class="gap"></div>
-  <img src="start.jpg" alt="푸른빛">
+  <img src="static/start.jpg" alt="푸른빛">
   <p>갑자기 푸른 빛에 휩싸이며 <strong>영화 세상</strong> 으로 들어오고 말았다.</p>
   <div class="gap2"></div>
-  <img src="pow.jpg" alt="펑!">
+  <img src="static/pow.jpg" alt="펑!">
   <p>"펑!!"</p>
   <div class="gap2"></div>
   <p>펑!! 소리와 함께 어디선가 자신을 "척척박사" 라고 말하는 캐릭터가 나타났다.</p>
   <p>난데없이 나타나선 내 취향에 따라 원하는 영화로 갈 수 있게 도와준다는데?</p>
-  <img src="dr.movie.png" alt="척척박사">
+  <img src="static/dr.movie.png" alt="척척박사">
   <p>"안녕 나는 숭플릭스의 척척박사라고 해! 보시다 시피 여기는 영화속 세상으로 가기 전 입구야!"</p>
-  <p>"이곳을 통해 너가 평소에 꿈꾸던 영화로 들어가서 살 수 있어, 하지만 그냥 원하는 곳으로 갈 순 없지. 너의 취향을 알아내서 네가 갈 수 있는 영화 1개를 골라 줄게!"</p>
+  <p>"이곳을 통해 평소에 꿈꾸던 영화속으로 들어가서 살 수 있어, 네 취향을 알아내서 네가 갈 수 있는 영화 1개를 골라 줄게!"</p>
+  <div class="gap2"></div>
+  <img src="static/dr.movie_hum.png" alt="척척박사">
+  <p>.. 못미더운가 본데, 나 꽤나 신통방통 하다구~?</p>
+  <p>흠흠!! 본격적으로 영화세상속으로 들어가기 전에 몇가지 질문을 할거야! 신중하게 선택해줘 자, 그럼~?</p><!-- 1010 이수진 수정 연결문장 추가-->
+  <div class="gap2"></div>
+  <img src="static/pow.jpg" alt="펑!">
+  <p>"펑!!"</p>
   <div class="gap2"></div>
 
 
 
+<!--1011 이수진 수정 상단에 중복되는 jquery 라이브러리 url이 있어서 삭제-->
+  <script>
+    function fnMove(seq) {
+      var offset = $("#div" + seq).offset();
+      $('html, body').animate({
+        scrollTop: offset.top - 230
+      }, 400  );
+    }
+  </script><!-- 1010 이수진 수정, onclick 반복코드 단축, 단순 길이스크롤이 아닌 화면 내 지정위치로 이동하는 코드로 변경 현재 페이지 상단에서 - 230 이동-->
 
 
 
-
-  <img src="genre.jpg" alt="장르">
-  <p>Q1. 평소 좋아하던 영화 장르를 골라봐!</p>
+  <img src="static/genre.jpg" alt="장르">
+  <p>Q1. 먼저 첫번째 질문이야! 평소 좋아하던 영화 장르가 뭐야?</p>
   <div id="radioContainer">
-    <label><input type="radio" name="Q1" value="1" onclick="$('html, body').stop().animate( { scrollTop : '+=750' } );">1. 멜로/로맨스</label>
-    <label><input type="radio" name="Q1" value="2" onclick="$('html, body').stop().animate( { scrollTop : '+=750' } );">2. 코미디</label>
-    <label><input type="radio" name="Q1" value="3" onclick="$('html, body').stop().animate( { scrollTop : '+=750' } );">3. 액션</label>
-    <label><input type="radio" name="Q1" value="4" onclick="$('html, body').stop().animate( { scrollTop : '+=750' } );">4. 공포(호러)</label>
-    <label><input type="radio" name="Q1" value="5" onclick="$('html, body').stop().animate( { scrollTop : '+=750' } );">5. 판타지/SF</label>
+    <label><input type="radio" name="Q1" value="1" onClick="fnMove('2')">1. 멜로/로맨스</label>
+    <label><input type="radio" name="Q1" value="2" onClick="fnMove('2')">2. 코미디</label>
+    <label><input type="radio" name="Q1" value="3" onClick="fnMove('2')">3. 액션</label>
+    <label><input type="radio" name="Q1" value="4" onClick="fnMove('2')">4. 공포(호러)</label>
+    <label><input type="radio" name="Q1" value="5" onClick="fnMove('2')">5. 판타지/SF</label>
   </div>
   <div class="gap2"></div>
-  <img src="feel.jpg" alt="기분">
+
+
+  <div id="div2"></div>
+  <img src="static/feel.jpg" alt="기분">
   <p>Q2. 현재 너의 컨디션은 어때?</p>
   <div id="radioContainer">
-    <label><input type="radio" name="Q2" value="1" onclick="$('html, body').stop().animate( { scrollTop : '+=750' } );">1. 최상의 컨디션. 몸이 날아 갈 것 같아</label>
-    <label><input type="radio" name="Q2" value="2" onclick="$('html, body').stop().animate( { scrollTop : '+=750' } );">2. 괜찮은 정도. 나쁠껀 뭐야</label>
-    <label><input type="radio" name="Q2" value="3" onclick="$('html, body').stop().animate( { scrollTop : '+=750' } );">3. 보통. 쏘쏘해</label>
-    <label><input type="radio" name="Q2" value="4" onclick="$('html, body').stop().animate( { scrollTop : '+=750' } );">4. 최악. 힘들어</label>
+    <label><input type="radio" name="Q2" value="1" onClick="fnMove('3')">1. 최상의 컨디션. 몸이 날아 갈 것 같아</label>
+    <label><input type="radio" name="Q2" value="2" onClick="fnMove('3')">2. 괜찮은 정도. 나쁠껀 뭐야</label>
+    <label><input type="radio" name="Q2" value="3" onClick="fnMove('3')">3. 보통. 쏘쏘해</label>
+    <label><input type="radio" name="Q2" value="4" onClick="fnMove('3')">4. 최악. 힘들어</label>
   </div>
   <div class="gap2"></div>
-  <img src="reality.jpg" alt="현실적">
+
+
+  <div id="div3"></div>
+  <img src="static/reality.jpg" alt="현실적"><!-- 1011 이수진 수정 reality.jpg 이미지 사이즈 640X420 으로 변경. 세로 픽셀 420 넘어갈경우 화면 잘림현상 발생. -->
   <p>Q3. 다음 중 네가 생각하는 가장 현실적인 건 뭐야?</p>
   <div id="radioContainer">
-    <label><input type="radio" name="Q3" value="1" onclick="$('html, body').stop().animate( { scrollTop : '+=750' } );">1. 복권 1등 당첨</label>
-    <label><input type="radio" name="Q3" value="2" onclick="$('html, body').stop().animate( { scrollTop : '+=750' } );">2. 인공지능 로봇</label>
-    <label><input type="radio" name="Q3" value="3" onclick="$('html, body').stop().animate( { scrollTop : '+=750' } );">3. 상상의 동물</label>
-    <label><input type="radio" name="Q3" value="4" onclick="$('html, body').stop().animate( { scrollTop : '+=750' } );">4. 총에 맞았지만 살아난 사람</label>
+    <label><input type="radio" name="Q3" value="1" onClick="fnMove('4')">1. 복권 1등 당첨</label>
+    <label><input type="radio" name="Q3" value="2" onClick="fnMove('4')">2. 인공지능 로봇</label>
+    <label><input type="radio" name="Q3" value="3" onClick="fnMove('4')">3. 상상의 동물</label>
+    <label><input type="radio" name="Q3" value="4" onClick="fnMove('4')">4. 총에 맞았지만 살아난 사람</label>
   </div>
   <div class="gap2"></div>
-  <img src="vacation.jpg" alt="휴가">
+
+
+  <div id="div4"></div>
+  <img src="static/vacation.jpg" alt="휴가">
   <p>Q4. 모처럼만의 휴가를 받는다면 네가 제일 가고 싶은 곳은 어디야?</p>
   <div id="radioContainer">
-    <label><input type="radio" name="Q4" value="1" onclick="$('html, body').stop().animate( { scrollTop : '+=750' } );">1. 해외의 화려한 유흥 도시</label>
-    <label><input type="radio" name="Q4" value="2" onclick="$('html, body').stop().animate( { scrollTop : '+=750' } );">2. 인심 넘치는 시골로 드라이브</label>
-    <label><input type="radio" name="Q4" value="3" onclick="$('html, body').stop().animate( { scrollTop : '+=750' } );">3. 뒷산으로 가벼운 등산</label>
-    <label><input type="radio" name="Q4" value="4" onclick="$('html, body').stop().animate( { scrollTop : '+=750' } );">4. 국내의 바다</label>
+    <label><input type="radio" name="Q4" value="1" onClick="fnMove('5')">1. 해외의 화려한 유흥 도시</label>
+    <label><input type="radio" name="Q4" value="2" onClick="fnMove('5')">2. 인심 넘치는 시골로 드라이브</label>
+    <label><input type="radio" name="Q4" value="3" onClick="fnMove('5')">3. 뒷산으로 가벼운 등산</label>
+    <label><input type="radio" name="Q4" value="4" onClick="fnMove('5')">4. 국내의 바다</label>
   </div>
-  <div class="gap2">
+  <div class="gap2"></div>
+  <div id="div5"></div>
+  
+    
+  <div id="div5"></div>
+  <img src="static/play.jpg" alt="놀이">
+  <p>Q5. 네가 휴가지에서 가장 하고 싶은 게 뭐야?</p>
+  <div id="radioContainer">
+    <label><input type="radio" name="Q5" value="1" onClick="fnMove('6')">1. 잠을 잔다</label>
+    <label><input type="radio" name="Q5" value="2" onClick="fnMove('6')">2. 노래 감상</label>
+    <label><input type="radio" name="Q5" value="3" onClick="fnMove('6')">3. 맛집 탐방</label>
+    <label><input type="radio" name="Q5" value="4" onClick="fnMove('6')">4. 바다에서 수영</label>
   </div>
+  <div class="gap2"></div>
+
+
+  <div id="div6"></div>
+  <img src="static/food.jpg" alt="음식">
+  <p>Q6. 지금 먹고 싶은 음식을 골라봐!</p>
+  <div id="radioContainer">
+    <label><input type="radio" name="Q6" value="1" onClick="fnMove('7')">1. 짜장면</label>
+    <label><input type="radio" name="Q6" value="2" onClick="fnMove('7')">2. 피자</label>
+    <label><input type="radio" name="Q6" value="3" onClick="fnMove('7')">3. 치킨</label>
+    <label><input type="radio" name="Q6" value="4" onClick="fnMove('7')">4. 햄버거</label>
+  </div>
+  <div class="gap2"></div>
+
+
+  <div id="div7"></div>
+  <img src="static/dessert.jpg" alt="디저트">
+  <p>Q7. 마지막 질문이야! 먹고 싶은 디저트를 골라봐!</p>
+  <div id="radioContainer">
+    <label><input type="radio" name="Q7" value="1" onClick="fnMove('8')">1. 양갱</label>
+    <label><input type="radio" name="Q7" value="2" onClick="fnMove('8')">2. 초코바</label>
+    <label><input type="radio" name="Q7" value="3" onClick="fnMove('8')">3. 모찌</label>
+    <label><input type="radio" name="Q7" value="4" onClick="fnMove('8')">4. 마카롱</label>
+  </div>
+  <div class="gap2"></div>
+
+
+   <div id="div8"></div>
+   <img src="static/end_.jpg" alt="끝">
+   <p>와!! 끝이야!! 고생했어~ 정말 고생했어~~!!</p>
+   <p>이제 조금만 기다리면 !! 네가 원하는 영화세상속으로 보내줄거야!!</p>
+   <div class="gap2"></div>
+   <div class="gap2"></div>
+
+
 </body>
 
 </html>
+    
+    

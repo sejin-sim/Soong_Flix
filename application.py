@@ -1,15 +1,19 @@
-from flask import Flask
+from flask import Flask, render_template, request
 import sys
-application = Flask(__name__)
+
+app = Flask(__name__)
 
 
-@application.route("/")
-def hello():
-    return "Hello goorm!!"
+@app.route('/')
+def home():
+    return render_template('soongflix_1.html')
 
+@app.route('/start')
+def start():
+    return render_template('soongflix_check_1.html')
 
 if __name__ == "__main__":
-    application.run(host='0.0.0.0', port=int(sys.argv[1]))
+    app.run(host='0.0.0.0', port=int(sys.argv[1]))
 
     
     
