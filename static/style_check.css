@@ -2,6 +2,9 @@ body {
   background-color: black;
   color: white;
   text-align: center;
+  font-size: 17pt;
+  font-family: 'Chelsea Market', cursive;
+  font-family: 'Stylish', cursive;
 }
 
 .showcase-top {

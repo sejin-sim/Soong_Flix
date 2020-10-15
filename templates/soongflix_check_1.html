@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="style_check.css" />
   <link rel="stylesheet" href="{{ url_for('static', filename='style_check.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Stylish&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
   <title>SOONGFLIX</title>
     
@@ -65,7 +66,7 @@
   </script><!-- 1010 이수진 수정, onclick 반복코드 단축, 단순 길이스크롤이 아닌 화면 내 지정위치로 이동하는 코드로 변경 현재 페이지 상단에서 - 230 이동-->
 
 
-
+  <form action="/get_value" method="POST" > <!--test 중 1015 심세진 삽입-->
   <img src="static/genre.jpg" alt="장르">
   <p>Q1. 먼저 첫번째 질문이야! 평소 좋아하던 영화 장르가 뭐야?</p>
   <div id="radioContainer">
@@ -75,9 +76,11 @@
     <label><input type="radio" name="Q1" value="4" onClick="fnMove('2')">4. 공포(호러)</label>
     <label><input type="radio" name="Q1" value="5" onClick="fnMove('2')">5. 판타지/SF</label>
   </div>
+
+  
   <div class="gap2"></div>
-
-
+  
+    
   <div id="div2"></div>
   <img src="static/feel.jpg" alt="기분">
   <p>Q2. 현재 너의 컨디션은 어때?</p>
@@ -148,6 +151,8 @@
     <label><input type="radio" name="Q7" value="3" onClick="fnMove('8')">3. 모찌</label>
     <label><input type="radio" name="Q7" value="4" onClick="fnMove('8')">4. 마카롱</label>
   </div>
+  <input type="submit"> <!--test 중 1015 심세진 삽입-->
+  </form> <!--test 중 1015 심세진 삽입-->
   <div class="gap2"></div>
 
 
