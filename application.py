@@ -28,9 +28,10 @@ def get_value():
         # if len(data)<7: 선택한 갯수가 7보다 적으면 에러 팝업창을 띄워준다.
         #     return
         print(data)
-        mv_API.get_data(data)
+        MV = mv_API.get_data(data)
 
-        return '결과 화면 output' #return render_template('result.html')
+        return '결과 화면 output' # return render_template('result.html', poster = MV)
+                                 # {{poster}} in result.html 
 
 if __name__ == "__main__":
     application.run(host='0.0.0.0', port=int(sys.argv[1]))
