@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="ko" dir="ltr">
 
 <head>
   <meta charset="utf-8">
@@ -60,7 +59,7 @@
     function fnMove(seq) {
       var offset = $("#div" + seq).offset();
       $('html, body').animate({
-        scrollTop: offset.top - 130
+        scrollTop: offset.top - 180
       }, 400  );
     }
   </script><!-- 1010 이수진 수정, onclick 반복코드 단축, 단순 길이스크롤이 아닌 화면 내 지정위치로 이동하는 코드로 변경 현재 페이지 상단에서 - 230 이동-->
@@ -74,13 +73,63 @@
     <label><input type="radio" name="Q1" value="2" onClick="fnMove('2')">2. 코미디</label>
     <label><input type="radio" name="Q1" value="3" onClick="fnMove('2')">3. 액션</label>
     <label><input type="radio" name="Q1" value="4" onClick="fnMove('2')">4. 공포(호러)</label>
-    <label><input type="radio" name="Q1" value="5" onClick="fnMove('2')">5. 판타지/SF</label>
+    <label><input type="radio" name="Q1" value="5" onClick="fnMove('2')" required>5. 판타지/SF</label>
   </div>
-
-  
   <div class="gap2"></div>
-  
+      
+      
+      
+      
+<!-- 라디오버튼을 검사하는 script 추가해보았으나 미실행..
+      
+<script>
+
+if ( ! jQuery('input[name="Q1"]:checked').val() ) {
+    alert('옵션을 선택해주세요.');
+    jQuery('input[name="Q1"]').focus();
+    return false;
+}
+
+</script>
+1027 20:33 이수진 -->
+      
+      
+      
+<!--required-- 코드 사용 해보았으나 적용 안됨. ?????? 1027 20:15 이수진-->
+      
     
+<!--  1027 이수진 필수 선택지 옵션 선택 시도.
+<script>
+  function formcheck(f){
+   var checked = false;
+   for(var i=0; i<f.Q1.length; i++){
+    if(f.mb_1[i].checked == true){
+     checked = true;
+     break;
+    }
+   }
+
+   if(checked == false){
+    alert("1번 항목을 선택하지 않았습니다.");
+    return false;
+   }
+  }
+  </script>     실패 1027 20: 10 -->
+      
+      
+<!-- 또 다른시도      
+<script>
+    
+    
+if ( $(f).find('[name=Q1]:checked').length < 1 ) {
+     alert("선택지를 꼭 클릭하세요.");
+     return false;
+}
+      
+</script>   실패... 1027  21:15 이수진 -->      
+      
+      
+      
   <div id="div2"></div>
   <img src="static/feel.jpg" alt="기분">
   <p>Q2. 현재 너의 컨디션은 어때?</p>
@@ -88,7 +137,7 @@
     <label><input type="radio" name="Q2" value="1" onClick="fnMove('3')">1. 최상의 컨디션. 몸이 날아 갈 것 같아</label>
     <label><input type="radio" name="Q2" value="2" onClick="fnMove('3')">2. 괜찮은 정도. 나쁠껀 뭐야</label>
     <label><input type="radio" name="Q2" value="3" onClick="fnMove('3')">3. 보통. 쏘쏘해</label>
-    <label><input type="radio" name="Q2" value="4" onClick="fnMove('3')">4. 최악. 힘들어</label>
+    <label><input type="radio" name="Q2" value="4" onClick="fnMove('3')" required>4. 최악. 힘들어</label>
   </div>
   <div class="gap2"></div>
 
@@ -100,7 +149,7 @@
     <label><input type="radio" name="Q3" value="1" onClick="fnMove('4')">1. 복권 1등 당첨</label>
     <label><input type="radio" name="Q3" value="2" onClick="fnMove('4')">2. 인공지능 로봇</label>
     <label><input type="radio" name="Q3" value="3" onClick="fnMove('4')">3. 상상의 동물</label>
-    <label><input type="radio" name="Q3" value="4" onClick="fnMove('4')">4. 총에 맞았지만 살아난 사람</label>
+    <label><input type="radio" name="Q3" value="4" onClick="fnMove('4')" required>4. 총에 맞았지만 살아난 사람</label>
   </div>
   <div class="gap2"></div>
 
@@ -112,7 +161,7 @@
     <label><input type="radio" name="Q4" value="1" onClick="fnMove('5')">1. 해외의 화려한 유흥 도시</label>
     <label><input type="radio" name="Q4" value="2" onClick="fnMove('5')">2. 인심 넘치는 시골로 드라이브</label>
     <label><input type="radio" name="Q4" value="3" onClick="fnMove('5')">3. 뒷산으로 가벼운 등산</label>
-    <label><input type="radio" name="Q4" value="4" onClick="fnMove('5')">4. 아무도 없는 절</label>
+    <label><input type="radio" name="Q4" value="4" onClick="fnMove('5')" required>4. 아무도 없는 절</label>
   </div>
   <div class="gap2"></div>
   <div id="div5"></div>
@@ -125,7 +174,7 @@
     <label><input type="radio" name="Q5" value="1" onClick="fnMove('6')">1. 잠을 잔다</label>
     <label><input type="radio" name="Q5" value="2" onClick="fnMove('6')">2. 노래 감상</label>
     <label><input type="radio" name="Q5" value="3" onClick="fnMove('6')">3. 맛집 탐방</label>
-    <label><input type="radio" name="Q5" value="4" onClick="fnMove('6')">4. 바다에서 수영</label>
+    <label><input type="radio" name="Q5" value="4" onClick="fnMove('6')" required>4. 바다에서 수영</label>
   </div>
   <div class="gap2"></div>
 
@@ -137,7 +186,7 @@
     <label><input type="radio" name="Q6" value="1" onClick="fnMove('7')">1. 어린날로 돌아갈래 하이틴 10대! </label>
     <label><input type="radio" name="Q6" value="2" onClick="fnMove('7')">2. 본격적인 내 삶의 시작! 청춘 20대!</label><br>
     <label><input type="radio" name="Q6" value="3" onClick="fnMove('7')">3. 내 인생의 황금기 절정, 30대! </label>
-    <label><input type="radio" name="Q6" value="4" onClick="fnMove('7')">4. 완전한 어른이지. 40대!</label>
+    <label><input type="radio" name="Q6" value="4" onClick="fnMove('7')" required>4. 완전한 어른이지. 40대!</label>
   </div>
   <div class="gap2"></div>
 
@@ -149,7 +198,7 @@
     <label><input type="radio" name="Q7" value="1" onClick="fnMove('8')">1. 양갱</label>
     <label><input type="radio" name="Q7" value="2" onClick="fnMove('8')">2. 초코바</label>
     <label><input type="radio" name="Q7" value="3" onClick="fnMove('8')">3. 모찌</label>
-    <label><input type="radio" name="Q7" value="4" onClick="fnMove('8')">4. 마카롱</label>
+    <label><input type="radio" name="Q7" value="4" onClick="fnMove('8')" required>4. 마카롱</label>
   </div>
 
   <div class="gap2"></div>
@@ -159,7 +208,8 @@
    <img src="static/end_.jpg" alt="끝">
    <p>와!! 끝이야!! 고생했어~ 정말 고생했어~~!!</p>
    <p>이제 조금만 기다리면 !! 네가 원하는 영화세상속으로 보내줄거야!!</p>
-   <input type="submit"> <!--1015 심세진 삽입-->
+   <input type="submit">
+ <!--   <input type="submit", onClick="check()">1015 심세진 삽입-->
    </form> <!--1015 심세진 삽입-->
    <div class="gap2"></div>
    <div class="gap2"></div>

@@ -54,18 +54,21 @@ h1 {
 }
 
 .textstyle {
+  
   margin : 20px 0;
   font-family: "Netflix Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .textstyle .movieTitle {
+  margin-top : 15px;
   font-size : 45px;
   font-weight : bold;
-  margin : 20px 0;
+  margin : 15px 0px;
+  line-height: 50px;
 }
 
 .textstyle .product{
-  margin-top : 15px;
+  padding-top : 10px;
   font-size: 20px;
   display : block;
 };
@@ -82,8 +85,8 @@ h1 {
 .contentsContainer {
   width: 80%;
   height: 1200px;
-  
-  
+  border-radius: 15px;
+
   /* background-image: linear-gradient(90deg, rgba(238, 101, 136, 0.9), rgba(246, 149, 96, 0.9)); */
 
   /* background: url("../static/SOONGFLIX_background2.png") no-repeat center/cover; */
@@ -95,6 +98,15 @@ h1 {
   box-sizing: border-box;
 }
 
+.contentsContainer_result {
+  width: 80%;
+  height: 800px;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding-top: 15px;
+}
 .contentsImage {
   position: relative;
   width: 100%;
@@ -134,4 +146,3 @@ h1 {
   width: 100%;
   height: 400px;
 }
-
