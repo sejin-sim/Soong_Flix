@@ -1,0 +1,148 @@
+body {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  text-align: center;
+  color: white;
+  background: url("https://assets.nflxext.com/ffe/siteui/vlv3/69b9cce3-4fdc-4ed0-8825-9b24c97c3993/9a474f01-24f3-452b-b585-676813ac2fba/KR-ko-20201005-popsignuptwoweeks-perspective_alpha_website_large.jpg")
+    no-repeat center/cover;
+}
+
+.backgroundOpacity {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 0, 0, 0.6);
+  padding-bottom: 40px;
+}
+
+h1 {
+  padding-top: 40px;
+}
+
+.showcase-top {
+  text-align: left;
+}
+
+.showcase {
+  position: relative;
+  margin-bottom: 20px;
+  margin-left: 15px;
+}
+
+.contentsImage .myButton {
+  box-shadow: inset 0px 1px 0px 0px #f5978e;
+  background: linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
+  background-color: #f24537;
+  border-radius: 6px;
+  border: 1px solid #d02718;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #810e05;
+  position: relative;
+  left: 3px;
+  top: 50%;
+
+}
+
+.textstyle {
+  
+  margin : 20px 0;
+  font-family: "Netflix Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.textstyle .movieTitle {
+  margin-top : 15px;
+  font-size : 45px;
+  font-weight : bold;
+  margin : 15px 0px;
+  line-height: 50px;
+}
+
+.textstyle .product{
+  padding-top : 10px;
+  font-size: 20px;
+  display : block;
+};
+
+.contentsImage .myButton:hover {
+  background: linear-gradient(to bottom, #c62d1f 5%, #f24537 100%);
+  background-color: #c62d1f;
+}
+.contentsImage .myButton:active {
+  position: relative;
+  top: 50%;
+}
+
+.contentsContainer {
+  width: 80%;
+  height: 1200px;
+  border-radius: 15px;
+
+  /* background-image: linear-gradient(90deg, rgba(238, 101, 136, 0.9), rgba(246, 149, 96, 0.9)); */
+
+  /* background: url("../static/SOONGFLIX_background2.png") no-repeat center/cover; */
+
+  background-color: rgba(0, 0, 0, 0.8);
+  
+  /* border : 8px solid #222; */
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.contentsContainer_result {
+  width: 80%;
+  height: 800px;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding-top: 15px;
+}
+.contentsImage {
+  position: relative;
+  width: 100%;
+  height: calc(100% / 2.4);
+  background: url("../img/SOONGFLIX_background2.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 15px;
+}
+
+
+/*  
+.contentsImage .start {
+  position: relative;
+  background-color: #DB2828;
+  color: #fff;
+  top : 50%;
+  left : 46.5%;
+  width : 95px;
+  height : 30px;
+  border-radius : 10px;
+  border : none;
+  position: relative;
+  left: 300px;
+  top: 50px;
+}
+
+.contentsImage .start:hover {
+  background-color: #d01919;
+}
+
+*/
+
+
+.imageContainer {
+  width: 100%;
+  height: 400px;
+}
+

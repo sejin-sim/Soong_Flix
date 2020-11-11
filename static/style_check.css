@@ -2,9 +2,9 @@ body {
   background-color: black;
   color: white;
   text-align: center;
-  font-size: 17pt;
+  font-size: 19pt;
   font-family: 'Chelsea Market', cursive;
-  font-family: 'Stylish', cursive;
+  font-family: 'Do Hyeon', cursive;
 }
 
 .showcase-top {
@@ -29,7 +29,7 @@ body {
 
 
 .btn_submit{
- background-image: url("../static/submit_css.png");
+ background-image: url("../static/submit_css_.png");
     background-position:  0px 0px;
     background-repeat: no-repeat;
     width: 130px;

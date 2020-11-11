@@ -4,7 +4,6 @@ import mv_API
 
 application = Flask(__name__)
 
-
 @application.route('/')
 def home():
     return render_template('soongflix_1.html')
@@ -13,6 +12,9 @@ def home():
 def start():
     return render_template('soongflix_check_1.html')
 
+@application.route('/remain')
+def remain():
+    return render_template('soongflix_1.html')
 
 @application.route('/get_value', methods=['POST','GET'])
 def get_value():
@@ -29,6 +31,12 @@ def get_value():
         MV = mv_API.get_data(data)
         return render_template('soongflix_result.html', poster = MV)
 
+
+@application.route('/boxoffice')
+def boxoffice():
+    Boxoffice = box_API.get_data(data)
+    return render_template('###.html', dataset = Boxoffice)
+    
 if __name__ == "__main__":
     application.run(host='0.0.0.0', port=int(sys.argv[1]))
 

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="style_check.css" />
   <link rel="stylesheet" href="{{ url_for('static', filename='style_check.css') }}">
-  <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Stylish&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Do+Hyeon&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
   <title>SOONGFLIX</title>
     
@@ -69,11 +69,10 @@
   <img src="static/genre.jpg" alt="장르">
   <p>Q1. 먼저 첫번째 질문이야! 평소 좋아하던 영화 장르가 뭐야?</p>
   <div id="radioContainer">
-    <label><input type="radio" name="Q1" value="1" onClick="fnMove('2')">1. 멜로/로맨스</label>
-    <label><input type="radio" name="Q1" value="2" onClick="fnMove('2')">2. 코미디</label>
+    <label><input type="radio" name="Q1" value="1" onClick="fnMove('2')">1. 드라마/로맨스</label>
+    <label><input type="radio" name="Q1" value="2" onClick="fnMove('2')">2. 코메디</label>
     <label><input type="radio" name="Q1" value="3" onClick="fnMove('2')">3. 액션</label>
-    <label><input type="radio" name="Q1" value="4" onClick="fnMove('2')">4. 공포(호러)</label>
-    <label><input type="radio" name="Q1" value="5" onClick="fnMove('2')" required>5. 판타지/SF</label>
+    <label><input type="radio" name="Q1" value="4" onClick="fnMove('2')" required>4. 공포(호러)</label>
   </div>
   <div class="gap2"></div>
       
@@ -160,8 +159,8 @@ if ( $(f).find('[name=Q1]:checked').length < 1 ) {
   <div id="radioContainer">
     <label><input type="radio" name="Q4" value="1" onClick="fnMove('5')">1. 해외의 화려한 유흥 도시</label>
     <label><input type="radio" name="Q4" value="2" onClick="fnMove('5')">2. 인심 넘치는 시골로 드라이브</label>
-    <label><input type="radio" name="Q4" value="3" onClick="fnMove('5')">3. 뒷산으로 가벼운 등산</label>
-    <label><input type="radio" name="Q4" value="4" onClick="fnMove('5')" required>4. 아무도 없는 절</label>
+    <label><input type="radio" name="Q4" value="3" onClick="fnMove('5')">3. 조용한 내 방</label>
+    <label><input type="radio" name="Q4" value="4" onClick="fnMove('5')" required>4. 귀족 느낌 호캉스</label>
   </div>
   <div class="gap2"></div>
   <div id="div5"></div>
@@ -198,7 +197,7 @@ if ( $(f).find('[name=Q1]:checked').length < 1 ) {
     <label><input type="radio" name="Q7" value="1" onClick="fnMove('8')">1. 양갱</label>
     <label><input type="radio" name="Q7" value="2" onClick="fnMove('8')">2. 초코바</label>
     <label><input type="radio" name="Q7" value="3" onClick="fnMove('8')">3. 모찌</label>
-    <label><input type="radio" name="Q7" value="4" onClick="fnMove('8')" required>4. 마카롱</label>
+    <label><input type="radio" name="Q7" value="4" onClick="fnMove('8')" required>4. 인절미</label>
   </div>
 
   <div class="gap2"></div>
