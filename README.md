@@ -4,7 +4,7 @@
 
 * 팀원 : 김규철, 심세진, 이수진, 이지연
 
-* 배포 사이트 : http://sejinsim.pythonanywhere.com/
+* 배포 사이트 : https://soong-flix-zefgu.run.goorm.io/
 
 1. 서비스 설명 : 사이트 접속자의 취향을 수집하여 영화를 추천해 준다.
 2. 프로젝트 목적 : 미디어 경영학과 학우들의 개인취향 영화추천  **"Soong_Flix와 함께하는 취향저격 영화 추천"**
