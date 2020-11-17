@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 import sys
 import mv_API
+import box_API
 
 application = Flask(__name__)
 
@@ -31,11 +32,10 @@ def get_value():
         MV = mv_API.get_data(data)
         return render_template('soongflix_result.html', poster = MV)
 
-
 @application.route('/boxoffice')
 def boxoffice():
-    Boxoffice = box_API.get_data(data)
-    return render_template('###.html', dataset = Boxoffice)
+    Boxoffice = box_API.bo()
+    return render_template('boxoffice.html', Boxoffice=Boxoffice)
     
 if __name__ == "__main__":
     application.run(host='0.0.0.0', port=int(sys.argv[1]))

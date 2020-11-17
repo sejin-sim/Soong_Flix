@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+
+
+  <link rel='stylesheet' href="../static/css/reset.css">
+  <link rel='stylesheet' href="../static/css/boxoffice.css">
+  <link rel="stylesheet" href="../static/css/style_soong.css" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='style_soong.css') }}">
+
+  <title>SOONGFLIX</title>
+</head>
+<body>
+  <div class="backgroundOpacity">
+
+
+  <header class="showcase">
+    <div class="showcase-top">
+   <img src="../static/img/SOONGFLIX_LOGO.png" width="15%">
+    </div>
+  </header>
+
+    <div class='contentsContainer_result'>
+
+      <div class='textstyle'>
+        <div style="display:flex; flex-direction: column; height: 90%;">
+          <span class="movieTitle">영화 박스오피스 TOP 10</span>
+          <span class="movieTitle">최신 영화 박스오피스 순위를 알려 드립니다</span>
+          <span class="product">즐거운 관람 되시길 바랍니다.</span>
+          <div class="boxOffice">
+              <!--<h2 class="boxOfficeType"></h2>
+              <p class="showRange"></p>
+
+              <ul class="boxOfficeList"></ul> 원래 블로그에 있던 코드-->
+              <h2>공란</h2>
+              <p>일단빈칸</p>
+              <ul>
+                <li>
+                    {% for i in range(0,10) %}
+                    <p>{{Boxoffice[i][0]}} : {{Boxoffice[i][1]}} {{Boxoffice[i][2]}} {{Boxoffice[i][3]}} {{Boxoffice[i][4]}}</p>
+                {% endfor %}</li>
+              </ul>
+          </div>
+        </div>
+
+        <div>
+          <a href=remain class="myButton1" style="margin : 0 23px 0 0"> 다시하기 </a>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <img src="static/Soongsil_Univ.png" alt="광고">
+    </div>
+  </div>
+
+
+</body>
+
+</html>

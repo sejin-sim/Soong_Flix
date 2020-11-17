@@ -1,0 +1,41 @@
+*{
+    margin:0;
+    padding:0;
+}
+body {
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-size: 19pt;
+}
+.boxOffice{
+    width: 500px;
+    margin: 20px auto;
+    padding: 5px;
+    border: 3px dotted #fff;
+    border-radius: 6px;
+
+}
+ul {
+    width: 100%;
+    padding: 8px;
+    list-style-position: inside;
+    text-align: left;
+    list-style-type: none;
+}
+ul li {
+    width: 92%;
+    margin: 5px 0;
+    background: rgb(204, 000, 000);
+    font-size: 15pt;
+    color: white;
+    padding : 5px 10px;
+    cursor: pointer;
+}
+ul li:hover {
+    background: rgb(240, 232, 128);
+}
+
+.showRange {
+  color: blue;
+}
