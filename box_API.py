@@ -17,6 +17,8 @@ def bo():
     today=dt.datetime.now()
     delta=dt.timedelta(days=-1)
     yesterday=today+delta
+    date = str(yesterday)
+    date = date[:10]
     yesterday_str= str(yesterday).replace("-","")
     yesterday_str = yesterday_str[:8]
     #호출에 사용할 API
@@ -36,4 +38,4 @@ def bo():
     tmp_df = daily_boxoffice_df.filter(['rank','movieNm','openDt','audiAcc'])
 
     Boxoffice = list((tmp_df.values.tolist()))
-    return Boxoffice
+    return Boxoffice #, date

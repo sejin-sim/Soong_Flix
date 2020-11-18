@@ -56,16 +56,36 @@ def get_data(data):  # 사용자가 입력한 정보를 영화 포스터로 반�
     rows = xtree.find("Result").findall("Row")
     rowsLength = len(rows)
     # 만약 데이터가 없으면
-    if rowsLength == 0:
-        # plot 값을 변경해가며 실행
-        for i in range(2, 5):
-            plot = new_data[i]
-            res = call_api(genre, year, plot, nation)
-            xtree = ET.fromstring(res.text)
-            rows = xtree.find("Result").findall("Row")
-            rowsLength = len(rows)
-            if rowsLength != 0:
-                break
+    if rowsLength == 0:  # plot 2개 첫번째 조합
+        plot = ','.join([new_data[2],new_data[3]]) 
+        res = call_api(genre, year, plot, nation)
+        xtree = ET.fromstring(res.text)
+        rows = xtree.find("Result").findall("Row")
+        rowsLength = len(rows)
+        
+        if rowsLength == 0: # plot 2개 두번째 조합
+          plot = ','.join([new_data[2],new_data[4]])
+          res = call_api(genre, year, plot, nation)
+          xtree = ET.fromstring(res.text)
+          rows = xtree.find("Result").findall("Row")
+          rowsLength = len(rows)
+
+          if rowsLength == 0: # plot 2개 세번째 조합
+              plot = ','.join([new_data[3],new_data[4]])
+              res = call_api(genre, year, plot, nation)
+              xtree = ET.fromstring(res.text)
+              rows = xtree.find("Result").findall("Row")
+              rowsLength = len(rows)
+              
+              if rowsLength == 0: # plot 1개씩 조회
+                for i in range(2, 5):
+                    plot = new_data[i]
+                    res = call_api(genre, year, plot, nation)
+                    xtree = ET.fromstring(res.text)
+                    rows = xtree.find("Result").findall("Row")
+                    rowsLength = len(rows)
+                    if rowsLength != 0:
+                        break
 
     try:
       randomIndex = random.randrange(0, rowsLength)
@@ -73,13 +93,12 @@ def get_data(data):  # 사용자가 입력한 정보를 영화 포스터로 반�
       return poster.text.split("|")[0]
 
     except: # 총 120개 조합 중 약 5개 에러 발생 확인 = 약 4% 대비하여 '일본' + '시골' 포스터 입력
-        
             # 에러발생 : ['코메디', 2014, '로봇', '시골', '노래', '20대', '일본']
             # 에러발생 : ['코메디', 2014, '로봇', '시골', '음식', '30대', '일본']
             # 에러발생 : ['코메디', 2011, '로봇', '집', '음식', '30대', '일본']
             # 에러발생 : ['코메디', 2015, '동물', '호텔', '바다', '40대', '대한민국']
             # 에러발생 : ['공포', 2003, '총', '호텔', '바다', '40대', '대한민국']
-      poster = "https://mblogthumb-phinf.pstatic.net/MjAyMDA5MjFfMjg5/MDAxNjAwNjQ5MjY4NzI3.PYDrcCRsHcxcb56qvXjySPuOZJmfzoi3REJF_iNODrgg.7hs0YtRlfxC3zoAcdJcVukwdeFQvpaGghNZtra2mxlYg.JPEG.insu1229/1600649271504.jpg?type=w800" # 너는 내 이름 포스터
+      poster = "https://mblogthumb-phinf.pstatic.net/MjAyMDA5MjFfMjg5/MDAxNjAwNjQ5MjY4NzI3.PYDrcCRsHcxcb56qvXjySPuOZJmfzoi3REJF_iNODrgg.7hs0YtRlfxC3zoAcdJcVukwdeFQvpaGghNZtra2mxlYg.JPEG.insu1229/1600649271504.jpg?type=w800" # 너의 이름은 포스터
       return poster
       pass
 

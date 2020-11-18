@@ -34,8 +34,8 @@ def get_value():
 
 @application.route('/boxoffice')
 def boxoffice():
-    Boxoffice = box_API.bo()
-    return render_template('boxoffice.html', Boxoffice=Boxoffice)
+    Boxoffice = box_API.bo() # , date
+    return render_template('boxoffice.html', Boxoffice=Boxoffice) # , date=date
     
 if __name__ == "__main__":
     application.run(host='0.0.0.0', port=int(sys.argv[1]))
