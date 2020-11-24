@@ -36,6 +36,9 @@ def bo():
 
     # 딕셔너리 내에서 활용 할 값 추출
     tmp_df = daily_boxoffice_df.filter(['rank','movieNm','openDt','audiAcc'])
-
+    
+    tmp_df['audiAcc'] = pd.to_numeric(tmp_df['audiAcc'])
+    tmp_df.update(tmp_df.select_dtypes(include=np.number).applymap('{:,}'.format))
+    
     Boxoffice = list((tmp_df.values.tolist()))
     return Boxoffice #, date

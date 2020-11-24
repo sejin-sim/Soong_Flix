@@ -2,6 +2,7 @@ import random
 import requests
 import xml.etree.ElementTree as ET
 from time import sleep
+import itertools
 
 def get_data(data):  # 사용자가 입력한 정보를 영화 포스터로 반환하는 함수
     new_data = []
@@ -11,10 +12,10 @@ def get_data(data):  # 사용자가 입력한 정보를 영화 포스터로 반�
          "3": "액션",
          "4": "공포"},
 
-        {"1": random.randrange(2016, 2018),
-         "2": random.randrange(2011, 2016),
-         "3": random.randrange(2006, 2011),
-         "4": random.randrange(2000, 2006)},
+        {"1": [2016, 2018],
+         "2": [2011, 2015],
+         "3": [2006, 2010],
+         "4": [2000, 2006]},
 
         {"1": "돈",
          "2": "로봇",
@@ -93,11 +94,6 @@ def get_data(data):  # 사용자가 입력한 정보를 영화 포스터로 반�
       return poster.text.split("|")[0]
 
     except: # 총 120개 조합 중 약 5개 에러 발생 확인 = 약 4% 대비하여 '일본' + '시골' 포스터 입력
-            # 에러발생 : ['코메디', 2014, '로봇', '시골', '노래', '20대', '일본']
-            # 에러발생 : ['코메디', 2014, '로봇', '시골', '음식', '30대', '일본']
-            # 에러발생 : ['코메디', 2011, '로봇', '집', '음식', '30대', '일본']
-            # 에러발생 : ['코메디', 2015, '동물', '호텔', '바다', '40대', '대한민국']
-            # 에러발생 : ['공포', 2003, '총', '호텔', '바다', '40대', '대한민국']
       poster = "https://mblogthumb-phinf.pstatic.net/MjAyMDA5MjFfMjg5/MDAxNjAwNjQ5MjY4NzI3.PYDrcCRsHcxcb56qvXjySPuOZJmfzoi3REJF_iNODrgg.7hs0YtRlfxC3zoAcdJcVukwdeFQvpaGghNZtra2mxlYg.JPEG.insu1229/1600649271504.jpg?type=w800" # 너의 이름은 포스터
       return poster
       pass
@@ -106,8 +102,8 @@ def call_api(genre, year, plot, nation):
     # API URI 준비
     callURI = 'http://api.koreafilm.or.kr/openapi-data2/wisenut/search_api/search_xml2.jsp?collection=kmdb_new2&detail=Y&ServiceKey=GD2S7LJMI3FZ3035F6M9'  # 기본 URI
     callURI += f'&genre={genre}'  # 장르
-    callURI += f'&releaseDts={year}0101'  # 시작개봉날짜
-    callURI += f'&releaseDte={year}1231'  # 끝개봉날짜
+    callURI += f'&releaseDts={year[0]}0101'  # 시작개봉날짜
+    callURI += f'&releaseDte={year[1]}1231'  # 끝개봉날짜
     callURI += f'&plot={plot}'  # 줄거리
     callURI += f'&nation={nation}'
 
@@ -119,6 +115,6 @@ def call_api(genre, year, plot, nation):
 
 # 디버그 확인 함수
 # import itertools
-# event = list(itertools.combinations_with_replacement([1,2,3,4], 7))
+# event = list(itertools.product([1,2,3,4], repeat=7))
 # for i in event:
 #   get_data(i)
