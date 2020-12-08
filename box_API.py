@@ -6,7 +6,7 @@ import numpy as np
 from pandas import DataFrame
 from matplotlib import pyplot
 
-def bo():
+def box():
     user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36"
     session = requests.Session()
     session.headers.update( {'User-agent': user_agent, 'referer': None} )
@@ -41,4 +41,4 @@ def bo():
     tmp_df.update(tmp_df.select_dtypes(include=np.number).applymap('{:,}'.format))
     
     Boxoffice = list((tmp_df.values.tolist()))
-    return Boxoffice #, date
+    return Boxoffice

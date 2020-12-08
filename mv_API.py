@@ -93,8 +93,8 @@ def get_data(data):  # 사용자가 입력한 정보를 영화 포스터로 반�
       poster = rows[randomIndex].find('posters')
       return poster.text.split("|")[0]
 
-    except: # 총 120개 조합 중 약 5개 에러 발생 확인 = 약 4% 대비하여 '일본' + '시골' 포스터 입력
-      poster = "https://mblogthumb-phinf.pstatic.net/MjAyMDA5MjFfMjg5/MDAxNjAwNjQ5MjY4NzI3.PYDrcCRsHcxcb56qvXjySPuOZJmfzoi3REJF_iNODrgg.7hs0YtRlfxC3zoAcdJcVukwdeFQvpaGghNZtra2mxlYg.JPEG.insu1229/1600649271504.jpg?type=w800" # 너의 이름은 포스터
+    except: # 총 1.3% 에러 발생 확인 = 장르 - 공포
+      poster = "https://post-phinf.pstatic.net/MjAxNzEwMTJfNyAg/MDAxNTA3NzczNzEzNDE4.4If6TI_4nn5ChT26Fz0i8oiLwCk_npOfvhMM2DGzI0Mg.IESbtvY3N2vmNK8o3JQU347ph2h6cVJ7bR74gV7JOLcg.JPEG/%EC%8F%981.jpg?type=w1200" # 쏘우 포스터
       return poster
       pass
 
@@ -118,3 +118,6 @@ def call_api(genre, year, plot, nation):
 # event = list(itertools.product([1,2,3,4], repeat=7))
 # for i in event:
 #   get_data(i)
+
+# 국가-일본일때 에러 COUNT = 139/4096 = 3% 
+# 국가-일본에서 미국 에러 COUNT = 52/4096 = 1.3%
