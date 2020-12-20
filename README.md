@@ -7,7 +7,7 @@
 &nbsp;&nbsp;&nbsp; 2. 백엔드(API) : 이지연   
 &nbsp;&nbsp;&nbsp; 3. 프론트(HTML, CSS, JS) : 김규철, 이수진   
 
-### * 배포 사이트 : https://soong-flix-zefgu.run.goorm.io/
+### * 배포 사이트 : https://soong-flix-zefgu.run.goorm.io/ (구름ide 실행시 접속 가능)
 
 &nbsp;&nbsp;&nbsp; 1. 서비스 설명 : 사이트 접속자의 취향을 수집하여 영화를 추천해 준다.   
 &nbsp;&nbsp;&nbsp; 2. 프로젝트 목적 : 미디어 경영학과 학우들의 개인취향 영화추천  **"Soong_Flix와 함께하는 취향저격 영화 추천"**   
