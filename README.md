@@ -17,5 +17,3 @@
 
 ### * 제작 과정 및 시연   
 &nbsp;&nbsp;&nbsp;  [![Video Label](http://img.youtube.com/vi/U1uERUryuEo/0.jpg)](https://youtu.be/U1uERUryuEo?t=0s)
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/U1uERUryuEo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
