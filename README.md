@@ -14,3 +14,8 @@
 &nbsp;&nbsp;&nbsp; 3. 주요 기능 : 취향 맞춤 영화 추천 + 일간 박스 오피스 순위   
 &nbsp;&nbsp;&nbsp; 4. 수익 모델 : 방문자 수 증가에 따른 광고 베너   
 &nbsp;&nbsp;&nbsp; 5. 개인 정보 : 수집 정보 無, 정보는 캐시 종료 삭제
+
+### * 제작 과정 및 시연   
+&nbsp;&nbsp;&nbsp;  [![Video Label](http://img.youtube.com/vi/U1uERUryuEo/0.jpg)](https://youtu.be/U1uERUryuEo?t=0s)
+
+
